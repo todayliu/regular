@@ -109,7 +109,7 @@
 
 	Dispatcher.prototype._invokeCallback = function(id) {
 		this._isPending[id] = true;
-		this._callbacks[id](this._pendingPayload);
+		this._callbacks[id].broadcast.call(this._callbacks[id],this._pendingPayload);
 		this._isHandled[id] = true;
 	};
 

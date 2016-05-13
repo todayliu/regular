@@ -94,7 +94,7 @@ var Regular = function(definition, options) {
     var _this = this;
 
     if (this.broadcast) {
-        this.__broadcastid__ = dispatcher.register(this.broadcast);
+        this.__broadcastid__ = dispatcher.register(this);
     }
     domready(function() {
         _this.$emit("$mounted");
